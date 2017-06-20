@@ -20,14 +20,15 @@
 const express = require('express');
 const app = express();
 
+const operator = {
+  add: (a, b) => a + b;
+  subtract: (a, b) => a - b;
+  multiply: (a, b) => a * b;
+  divide: (a, b) => a / b;
+}
 
 app.get('/:operator/:num1/:num2', function (req, res) {
-  let operator = req.params.operator({
-    add: +,
-    subtract: -,
-    multiply: *,
-    divide: /
-  })
+  let operator = req.params.operator;
   console.log(operator);
   let num1 = req.params.num1;
   console.log(num1);
