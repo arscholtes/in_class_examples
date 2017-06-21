@@ -21,11 +21,11 @@ const express = require('express');
 const app = express();
 
 const operator = {
-  add: (a, b) => a + b;
-  subtract: (a, b) => a - b;
-  multiply: (a, b) => a * b;
-  divide: (a, b) => a / b;
-}
+  add: (num1, num2) => num1 + num2;
+  subtract: (num1, num2) => num1 - num2;
+  multiply: (num1, num2) => num1 * num2;
+  divide: (num1, num2) => num1 / num2;
+});
 
 app.get('/:operator/:num1/:num2', function (req, res) {
   let operator = req.params.operator;
@@ -35,7 +35,7 @@ app.get('/:operator/:num1/:num2', function (req, res) {
   let num2 = req.params.num2;
   console.log(num2);
   res.send("Answer:" + (Number(req.params.num1) + operator + Number(req.params.num1))
-}
+});
 
 
 
