@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Express Forms</title>
+</head>
+<body>
+  <!--
+    - the action parameter tells us which route the request will be sent to
+    - the method parameter tells us which HTTP method will be used to send the
+      request
+  -->
+  <form action="/" method="POST">
+    <h1>User Name</h1>
+    <p>Enter your email</p>
+    <!-- the name attribute is used as the key for the req.body object -->
+    <input type="text" name="email" placeholder="email address">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
